@@ -569,7 +569,9 @@ bool imageProcessing::vioPhotometric(cloudFrame* p_frame) {
         [&]() { J_zero.block<3, 3>(0, 0) = Eigen::Matrix3d::Identity() - 0.5 * numType::skewSymmetric(d_x.head<3>()); },
         "eq_skew");
 
-    Eigen::Matrix<double, 6, 6> eq_Inv, eq_H_mat1;
+    // Eigen::Matrix<double, 6, 6> eq_Inv, eq_H_mat1;
+    Eigen::MatrixXd eq_Inv(6, 6);                        // 保持6x6
+    Eigen::MatrixXd eq_H_mat1(6, total_point_size * 3);  // 动态列数
 
     eq_H_mat1 = cublasMul.multiply(H_mat.transpose(), R_mat_inv);
 

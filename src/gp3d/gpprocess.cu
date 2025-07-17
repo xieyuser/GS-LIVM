@@ -912,6 +912,12 @@ void gpProcess::forward_gp3d(
         delete[] h_voxels;
       },
       "gpFree");
+
+  cudaError_t err = cudaGetLastError();
+  if (err != cudaSuccess) {
+    printf("CUDA kernel launch error: %s\n", cudaGetErrorString(err));
+  }
+  
 }
 
 bool gpProcess::getColors(
