@@ -236,5 +236,5 @@ Thanks for [RoboStack](https://robostack.github.io/GettingStarted.html), [3D Gau
 ```
 
 ## License
-The source code of this package is released under GPLv2 license. We only allow it free for academic usage. For any technical issues, please feel free to contact yxie827@connect.hkust-gz.edu.cn.
+The source code of this package is released under GPLv3 license. For any technical issues, please feel free to contact yxie827@connect.hkust-gz.edu.cn.
 
