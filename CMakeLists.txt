@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.2)
 
 option(BUILD_GS "option for build 3DGS" ON)
 
+# need add this option
+# issue #30
+# set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -Xcompiler=-static-libstdc++")
+
 if(BUILD_GS)
   if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
     set(CMAKE_CUDA_ARCHITECTURES "80;86;90")
