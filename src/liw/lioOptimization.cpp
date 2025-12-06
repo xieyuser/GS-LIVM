@@ -1641,15 +1641,15 @@ void lioOptimization::optimize_vis() {
               cccount_hist++;
 
               // std::cout << camera_index << " outer " << std::endl;
-              for (int ii = 326; ii < 329; ++ii) {
-                if (ii >= camera_size) {
-                  continue;
-                }
+              // for (int ii = 326; ii < 329; ++ii) {
+              //   if (ii >= camera_size) {
+              //     continue;
+              //   }
 
-                // std::cout << ii << " inter " << _cameras.size() << std::endl;
-                auto cams = _cameras[ii];
-                optimized_cams2.push_back(cams);
-              }
+              //   // std::cout << ii << " inter " << _cameras.size() << std::endl;
+              //   auto cams = _cameras[ii];
+              //   optimized_cams2.push_back(cams);
+              // }
             }
             // std::cout << std::endl;
           },
